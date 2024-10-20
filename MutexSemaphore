@@ -1,0 +1,27 @@
+What's the difference between a Mutex and a Semaphore?
+
+Mutexes and Semaphores are synchronization mechanisms used in concurrent programming.
+
+They coordinate access to shared resources and protect them from simultaneous access.
+
+𝗠𝘂𝘁𝗲𝘅
+A mutex, short for mutual exclusion, is like a lock that ensures only one thread can access a resource at any given time. 
+Imagine it as a key to a single-person restroom. Only one person can use it at a time, and it stays locked until the person is done. Mutexes are binary—either locked or unlocked.
+
+𝗦𝗲𝗺𝗮𝗽𝗵𝗼𝗿𝗲
+A semaphore is like a parking lot with multiple spots. It uses a counter to track available resources, allowing multiple threads to access them concurrently. 
+The counter starts at the number of available resources and goes down each time a thread takes a spot. When a thread leaves, the counter goes up. 
+Depending on the count, semaphores can allow multiple threads in.
+
+𝗪𝗵𝗼 𝗼𝘄𝗻𝘀 𝘄𝗵𝗮𝘁?
+
+Mutexes maintain ownership, acquire, and release by the same thread or process. 
+In contrast, semaphores have no inherent concept of ownership. Any thread or process can increment or decrement the semaphore count.
+
+𝗪𝗵𝗲𝗻 𝘁𝗼 𝘂𝘀𝗲 𝗲𝗮𝗰𝗵?
+• Mutex: When you need to ensure only one thread can access a resource at a time.
+• Semaphore: When you need to allow a limited number of threads to access a resource concurrently.
+
+𝗤𝘂𝗶𝗰𝗸 𝗔𝗻𝗮𝗹𝗼𝗴𝗶𝗲𝘀
+• Mutex: A single key to a restroom. One person at a time.
+• Semaphore: A parking lot with limited spaces. Multiple cars can park, but only up to the limit.
