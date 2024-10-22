@@ -1,0 +1,10 @@
+Advantages of having thread Pool
+  1. Avoid the overhead of Thread creation task for each incoming task. Use the same existing Threads.
+  2. Skip the overhead of maintaining the lifespan of thread again & again.
+  3. More threads means more context switching, so it improve performance by avoiding frequent context switch
+
+How to decide number of threads in Multithreading architecture.
+1. Depends on CPU cores, more cores can afford more threads, otherwise its just concurrent execution with no performance improvement.
+2. JVM memory limit the number of threads creation, large memory can afford more threads
+3. If task is cpu intensive then use low thread pool size.
+4. If tasks are IO intensive then have thread count should be higher so that threads should not sit ideal for IO operation.
