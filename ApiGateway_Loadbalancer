@@ -1,0 +1,18 @@
+An API Gateway is an entry point for clients that want to communicate with microservices in the backend. Its main purposes include:
+
+1. Routing: Directs requests to the appropriate service or endpoint.
+2. Aggregation: Combines multiple services' responses into a single response.
+3. Authentication & Authorization: Ensures that only authenticated users can access specific services.
+4. Rate Limiting and Throttling: Manages request limits to prevent overloading.
+5. Logging and Monitoring: Tracks request details, which is essential for analytics and troubleshooting.
+
+Load Balancer
+A Load Balancer is responsible for distributing incoming requests evenly across multiple instances of a service to optimize resource use, maximize throughput, and reduce response time. Its functions include:
+1. Traffic Distribution: Balances requests between service instances to prevent any one instance from becoming overloaded.
+2. Failover and Redundancy: Redirects traffic to healthy instances if one or more are down.
+3. Improved Scalability: Enables the system to scale horizontally by adding more service instances.
+
+Position in Request Flow: 
+The API Gateway is usually the first point of contact when a client sends a request. It sits at the edge of the system, right in front of microservices.
+The Load Balancer typically sits between the API Gateway and the backend service instances. After a request is routed by the API Gateway, the Load Balancer 
+distributes it across multiple instances of a particular service.
