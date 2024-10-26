@@ -16,3 +16,6 @@ Position in Request Flow:
 The API Gateway is usually the first point of contact when a client sends a request. It sits at the edge of the system, right in front of microservices.
 The Load Balancer typically sits between the API Gateway and the backend service instances. After a request is routed by the API Gateway, the Load Balancer 
 distributes it across multiple instances of a particular service.
+
+API Gateway is generally essential for systems with multiple microservices, as it simplifies client interactions and enforces cross-cutting concerns like authentication and rate limiting.
+Load Balancer is also critical, but if a service doesn't need to scale horizontally (e.g., there's only one instance), then a Load Balancer may be less crucial.
