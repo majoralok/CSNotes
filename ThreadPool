@@ -8,3 +8,6 @@ How to decide number of threads in Multithreading architecture.
 2. JVM memory limit the number of threads creation, large memory can afford more threads
 3. If task is cpu intensive then use low thread pool size.
 4. If tasks are IO intensive then have thread count should be higher so that threads should not sit ideal for IO operation.
+
+
+Difference between wait, sleep, and join ( wait is important) : Wait is always used for synchronized block and always use while loop for conditions.
